@@ -1,2 +1,2 @@
-# rocketseat-lab
-Este repositório serve como um depósito centralizado para todos os projetos e códigos baseados nos cursos da Rocketseat
+# Random Courses Lab
+_Projetos e exemplos de código para estudos_
