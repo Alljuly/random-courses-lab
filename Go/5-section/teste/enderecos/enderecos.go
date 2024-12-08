@@ -1,8 +1,12 @@
 package enderecos
 
-import "strings"
+import (
+	"golang.org/x/text/cases"
+    "golang.org/x/text/language"
+	"strings"
+)
 
-func TipoEndereco(endereco string) string{
+func TipoEndereco(endereco string)  string{
 	tipos := []string{"rua", "avenida", "estrada", "rodovia"}
 
 	endereco = strings.ToLower(endereco)
@@ -18,9 +22,8 @@ func TipoEndereco(endereco string) string{
 		}
 	}
 	if logadouroDeEnderecoValido {
-		return strings.Title(logadouro) 
+		return cases.Title(language.Und).String(logadouro) 
 	}
 
 	return "Tipo Invalido"
-
 }
