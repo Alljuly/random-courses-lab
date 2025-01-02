@@ -1,3 +1,4 @@
+use baiaowordsacademy;
 -- Triggers Aluno
 DELIMITER $$
 
@@ -208,6 +209,18 @@ BEGIN
             SET MESSAGE_TEXT = 'Erro: O aluno não foi aprovado no nível anterior!';
         END IF;
     END IF;
+END$$
+
+DELIMITER $$
+
+CREATE PROCEDURE MatricularAluno(
+    IN aluno_id INT,
+    IN turma_id INT
+)
+BEGIN
+    -- Tenta inserir o registro na tabela Matriculas
+    INSERT INTO Matriculas (alunoid, turmaid, datamatricula, nota1, nota2)
+    VALUES (aluno_id, turma_id, curdate(), NULL, NULL);
 END$$
 
 DELIMITER ;
