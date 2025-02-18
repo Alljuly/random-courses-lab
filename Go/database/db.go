@@ -9,7 +9,7 @@ import (
 )
 
 func main(){
-	conn :=  "golang:golang@/devbook?charset=utf8&parseTime=Time&loc=Local"
+	conn :=  "golang:golang@/devbook?charset=utf8&parseTime=true&loc=Local"
 
 	db, erro := sql.Open("mysql", conn)
 
@@ -17,7 +17,21 @@ func main(){
 		log.Fatal(erro)
 	}
 
+	defer db.Close()
 
-	fmt.Println(db)
+	if erro = db.Ping(); erro != nil {
+		log.Fatal(erro)
+	}
+
+	fmt.Println("Conn aberta")
+	
+	
+	linhas, erro := db.Query("Select * from users")
+	
+	if erro != nil{
+		log.Fatal(erro)
+	}
+	fmt.Println(linhas)
+	defer linhas.Close()
 
 }
