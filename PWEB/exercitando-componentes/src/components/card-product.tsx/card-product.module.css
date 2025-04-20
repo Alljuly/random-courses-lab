@@ -1,0 +1,18 @@
+.cardProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 30%;
+  min-width: 100px;
+  margin: 10px;
+}
+
+.atributtesProduct {
+  width: 100%;
+}
+
+.cardImage {
+  width: 100%;
+}
