@@ -1,0 +1,9 @@
+[submodule "PWEB/dt-money/submodules/aula-dt-money-back"]
+	path = PWEB/dt-money/submodules/aula-dt-money-back
+	url = https://github.com/italocarlo06/aula-dt-money-back
+[submodule "PWEB/dt-money/repo-da-aula"]
+	path = PWEB/dt-money/repo-da-aula
+	url = https://github.com/italocarlo06/aula-dt-money
+[submodule "PWEB/dt-money/repo-da-aula-back"]
+	path = PWEB/dt-money/repo-da-aula-back
+	url = https://github.com/italocarlo06/aula-dt-money-back
